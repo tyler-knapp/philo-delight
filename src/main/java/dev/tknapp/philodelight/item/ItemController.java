@@ -1,13 +1,13 @@
-package dev.tknapp.philodelight.controller;
+package dev.tknapp.philodelight.item;
 
-import dev.tknapp.philodelight.model.Item;
-import dev.tknapp.philodelight.model.ItemRepository;
+import dev.tknapp.philodelight.item.model.Item;
+import dev.tknapp.philodelight.item.model.ItemRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-import static dev.tknapp.philodelight.constants.Constants.*;
+import static dev.tknapp.philodelight.common.Constants.*;
 
 @RestController
 @AllArgsConstructor

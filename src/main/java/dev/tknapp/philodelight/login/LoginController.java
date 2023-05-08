@@ -1,11 +1,11 @@
-package dev.tknapp.philodelight.controller.login;
+package dev.tknapp.philodelight.login;
 
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import static dev.tknapp.philodelight.constants.Constants.API_V1_LOGIN_FULL;
+import static dev.tknapp.philodelight.common.Constants.API_V1_LOGIN_FULL;
 
 @RestController
 @RequestMapping(API_V1_LOGIN_FULL)

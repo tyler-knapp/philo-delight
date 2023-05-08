@@ -1,8 +1,9 @@
 package dev.tknapp.philodelight;
 
-import dev.tknapp.philodelight.controller.ShoppingCart;
-import dev.tknapp.philodelight.model.Item;
-import dev.tknapp.philodelight.reader.DataFileReader;
+import dev.tknapp.philodelight.cart.ShoppingCart;
+import dev.tknapp.philodelight.item.model.Item;
+import dev.tknapp.philodelight.util.DataFileReader;
+import dev.tknapp.philodelight.util.Validator;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

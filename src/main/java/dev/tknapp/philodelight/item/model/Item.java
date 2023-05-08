@@ -1,4 +1,4 @@
-package dev.tknapp.philodelight.model;
+package dev.tknapp.philodelight.item.model;
 
 import jakarta.persistence.*;
 import lombok.*;

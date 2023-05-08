@@ -1,4 +1,4 @@
-package dev.tknapp.philodelight.reader;
+package dev.tknapp.philodelight.util;
 
 import java.io.File;
 import java.io.FileInputStream;

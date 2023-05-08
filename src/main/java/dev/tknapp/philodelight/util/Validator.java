@@ -1,4 +1,4 @@
-package dev.tknapp.philodelight;
+package dev.tknapp.philodelight.util;
 
 import java.util.ArrayList;
 import java.util.List;

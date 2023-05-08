@@ -1,13 +1,13 @@
-package dev.tknapp.philodelight.controller;
+package dev.tknapp.philodelight.account.controller;
 
-import dev.tknapp.philodelight.model.Account;
-import dev.tknapp.philodelight.model.AccountRepository;
+import dev.tknapp.philodelight.account.model.Account;
+import dev.tknapp.philodelight.account.model.AccountRepository;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import static dev.tknapp.philodelight.constants.Constants.API_V1_ACCOUNT_FULL;
+import static dev.tknapp.philodelight.common.Constants.API_V1_ACCOUNT_FULL;
 
 @RestController
 @RequestMapping(API_V1_ACCOUNT_FULL)

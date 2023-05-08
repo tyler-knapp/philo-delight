@@ -1,6 +1,6 @@
-package dev.tknapp.philodelight.controller;
+package dev.tknapp.philodelight.cart;
 
-import dev.tknapp.philodelight.model.Item;
+import dev.tknapp.philodelight.item.model.Item;
 
 import java.util.ArrayList;
 import java.util.List;

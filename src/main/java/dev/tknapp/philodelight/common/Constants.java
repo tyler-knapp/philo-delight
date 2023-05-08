@@ -1,4 +1,4 @@
-package dev.tknapp.philodelight.constants;
+package dev.tknapp.philodelight.common;
 
 public final class Constants {
     

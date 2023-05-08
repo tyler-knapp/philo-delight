@@ -1,4 +1,4 @@
-package dev.tknapp.philodelight.controller.login;
+package dev.tknapp.philodelight.login;
 
 public class LoginResponse {
     

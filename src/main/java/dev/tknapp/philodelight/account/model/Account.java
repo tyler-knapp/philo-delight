@@ -1,4 +1,4 @@
-package dev.tknapp.philodelight.model;
+package dev.tknapp.philodelight.account.model;
 
 import jakarta.persistence.*;
 import lombok.*;

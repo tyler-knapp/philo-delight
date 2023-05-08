@@ -1,4 +1,4 @@
-package dev.tknapp.philodelight.model;
+package dev.tknapp.philodelight.account.model;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
