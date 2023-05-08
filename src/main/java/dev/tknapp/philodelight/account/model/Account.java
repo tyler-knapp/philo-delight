@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
-@Table(name = "item")
+@Table(name = "account")
 @Getter
 @Setter
 @AllArgsConstructor
@@ -16,5 +16,9 @@ public class Account {
     @Column(name = "id", nullable = false)
     private Long id;
     
+    private String username;
+    
     private String email;
+    
+    private String password;
 }
