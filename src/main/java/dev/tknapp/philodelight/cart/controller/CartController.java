@@ -1,24 +1,30 @@
-package dev.tknapp.philodelight.cart;
+package dev.tknapp.philodelight.cart.controller;
 
+import dev.tknapp.philodelight.cart.dto.AddItemRequest;
+import dev.tknapp.philodelight.cart.dto.AddItemResponse;
+import dev.tknapp.philodelight.cart.model.Cart;
+import dev.tknapp.philodelight.cart.model.CartRepository;
+import dev.tknapp.philodelight.cart.pipeline.AddItemPipeline;
+import dev.tknapp.philodelight.cart.pipeline.CheckoutPipeline;
 import dev.tknapp.philodelight.item.model.Item;
 import dev.tknapp.philodelight.item.model.ItemRepository;
 import lombok.AllArgsConstructor;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import static dev.tknapp.philodelight.common.Constants.API_V1_CART_FULL;
-import static dev.tknapp.philodelight.common.Constants.API_V1_ITEM_FULL;
 
 @RestController
 @AllArgsConstructor
 @RequestMapping(API_V1_CART_FULL)
 public class CartController {
     
-    CartRepository cartRepository;
+    private final CheckoutPipeline checkoutPipeline;
     
-    ItemRepository itemRepository;
+    private final AddItemPipeline addItemPipeline;
+    
+    private final CartRepository cartRepository;
+    
+    private final ItemRepository itemRepository;
     
     //TODO More logical endpoint order?...
     @PutMapping("/{cartId}/items/{itemId}")
@@ -27,5 +33,10 @@ public class CartController {
     Item item = itemRepository.getOne(itemId);
     cart.enrollItem(item);
     return cartRepository.save(cart);
+    }
+    
+    @PostMapping()
+    public AddItemResponse addItem(@RequestBody AddItemRequest request){
+        return addItemPipeline.add(request);
     }
 }

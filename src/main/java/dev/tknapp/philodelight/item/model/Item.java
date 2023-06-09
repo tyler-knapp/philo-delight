@@ -1,27 +1,39 @@
 package dev.tknapp.philodelight.item.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import dev.tknapp.philodelight.cart.model.Cart;
 import jakarta.persistence.*;
-import lombok.*;
 
-import java.math.BigDecimal;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
-@Table(name = "item")
-@Getter
-@Setter
-@AllArgsConstructor
-@NoArgsConstructor
 public class Item {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id", nullable = false)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     
     @Column(name = "name")
     private String name;
     
-    //TODO - This may need to be a BigDecimal at some point?
-    @Column(name = "price")
-    private BigDecimal price;
+    @JsonIgnore
+    @ManyToMany(mappedBy = "enrolledItems")
+    private Set<Cart> carts = new HashSet<>();
+    
+    public Long getId() {
+        return id;
+    }
+    
+    public String getName() {
+        return name;
+    }
+    
+    public void setName(String name) {
+        this.name = name;
+    }
+    
+    public Set<Cart> getCarts() {
+        return carts;
+    }
     
 }

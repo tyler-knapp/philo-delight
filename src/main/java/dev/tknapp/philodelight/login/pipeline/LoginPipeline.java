@@ -1,2 +1,4 @@
-package dev.tknapp.philodelight.login.pipeline.impl;public class LoginPipeline {
+package dev.tknapp.philodelight.login.pipeline;
+
+public interface LoginPipeline {
 }

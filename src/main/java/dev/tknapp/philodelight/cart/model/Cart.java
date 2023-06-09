@@ -1,4 +1,4 @@
-package dev.tknapp.philodelight.cart;
+package dev.tknapp.philodelight.cart.model;
 
 import dev.tknapp.philodelight.item.model.Item;
 import jakarta.persistence.*;

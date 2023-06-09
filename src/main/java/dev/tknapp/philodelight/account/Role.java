@@ -1,6 +1,6 @@
 package dev.tknapp.philodelight.account;
 
-public enum AccountType {
+public enum Role {
     USER,
     ADMIN
 }

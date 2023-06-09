@@ -1,2 +1,4 @@
-package dev.tknapp.philodelight.cart.model;public class AddItemResponse {
+package dev.tknapp.philodelight.cart.dto;
+
+public class AddItemResponse {
 }
